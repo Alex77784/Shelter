@@ -11,13 +11,12 @@
             #5B483A 0%, #262425 100%);
 }
 
-.container {
+.container-not-only {
     max-width: 128rem;
     height: 90.8rem;
 
     margin: 0 auto;
     padding: 6rem 4rem 0;
-    outline: 2px solid red;
 }
 
 .heared-not-only {
@@ -84,14 +83,14 @@
 }
 
 /* ------------------------------------------ */
-.coneiner-not-only {
+.conainer-not-only {
     display: flex;
     justify-content: space-between;
 
     margin-top: 6rem;
 }
 
-.box-description {
+.box-description-not-only {
     display: flex;
     flex-direction: column;
     row-gap: 4.2rem;
@@ -103,7 +102,6 @@
 
 .title-not-only {
     font-family: var(--font-title);
-    font-weight: 400;
     font-size: 4.4rem;
     line-height: 130%;
 
@@ -112,23 +110,226 @@
 
 .text-not-only {
     font-family: var(--font-text);
-    font-weight: 400;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 160%;
 
     color: #CDCDCD;
 }
 
 .link-not-only {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20.8rem;
+    height: 5.2rem;
+
+
     background: var(--color-main);
     color: #292929;
-    border-radius: 2rem;
-    padding: 1.5rem 4.5rem;
+    border-radius: 3rem;
 
     font-family: var(--font-title);
     font-size: 1.7rem;
     letter-spacing: 0.06em;
 }
 
+.link-not-only:hover {
+    background: #FDDCC4;
+    transition: all 0.2s linear;
+}
+
 /*=======================About the shelter=========================*/
+
+.block-about-the-shelter {
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.container-about-the-shelter {
+    max-width: 128rem;
+    height: 58.8rem;
+
+    margin: 0 auto;
+    padding: 8rem 4rem;
+}
+
+.box-inner-about-the-shelter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12rem;
+    flex: 0 0 100%;
+}
+
+.box-description-about-the-shelter {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+
+    max-width: 43rem;
+    max-height: 38rem;
+}
+
+.title-about-the-shelter {
+    font-family: var(--font-title);
+    font-size: 3.5rem;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.text-about-the-shelter {
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    line-height: 160%;
+
+    color: #4C4C4C;
+}
+
+/*======================= Our friends =========================*/
+
+.block-our-friends {
+    width: 100%;
+    background: #F6F6F6;
+}
+
+.container-our-pets {
+    max-width: 128rem;
+    height: 87.7rem;
+
+    margin: 0 auto;
+    padding: 8rem 4rem 0;
+}
+
+.title-our-pets {
+    font-family: var(--font-title);
+    font-size: 3.5rem;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+.box-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 6rem;
+}
+
+/* ---------------------------- */
+.arrow-left {
+    width: 52px;
+    height: 52px;
+
+    background: url(../../assets/icons/Arrow-left.svg) center no-repeat;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+}
+
+.arrow-left:hover {
+    background-color: var(--color-main);
+    transition: all 0.2s linear;
+}
+
+/* ----------------------------- */
+.box-slider {
+    display: flex;
+    column-gap: 9rem;
+}
+
+.card-pet {
+    width: 27rem;
+    height: 43.5rem;
+
+    background: #FAFAFA;
+    border-radius: 9px;
+
+    transition: all 0.4s linear;
+}
+
+.card-pet:hover {
+    box-shadow: 0 0 5px 2px var(--color-main);
+
+}
+
+.card-pet:hover .btn-pet {
+    background: var(--color-main);
+    transition: all 0.4s linear;
+}
+
+.name-pet {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    margin: 3rem 0;
+
+    color: #545454;
+}
+
+.btn-pet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-title);
+    font-size: 1.7rem;
+    letter-spacing: 0.06em;
+
+    margin: 0 auto;
+    width: 18.8rem;
+    height: 5.2rem;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+
+    color: #292929;
+}
+
+/* -------------------------- */
+.arrow-right {
+    width: 52px;
+    height: 52px;
+
+    background: url(../../assets/icons/Arrow-right.svg) center no-repeat;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+}
+
+.arrow-right:hover {
+    background-color: var(--color-main);
+    transition: all 0.2s linear;
+}
+
+/* --------------------------- */
+.btn-next-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-title);
+    font-size: 1.7rem;
+    letter-spacing: 0.06em;
+
+    margin: 6rem auto 0;
+    width: 26.1rem;
+    height: 5.2rem;
+
+    background: var(--color-main);
+    border-radius: 100px;
+
+    color: #292929;
+}
+
+.btn-next-page:hover {
+    transition: all 0.2s linear;
+    background: #FDDCC4;
+}
