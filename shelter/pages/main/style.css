@@ -254,6 +254,7 @@
 }
 
 .card-pet:hover {
+    transform: translateY(-2px);
     box-shadow: 0 0 5px 2px var(--color-main);
 
 }
@@ -443,6 +444,11 @@
     width: 34.9rem;
     height: 4.3rem;
     border-radius: 9px;
+}
+
+.bank-account-donation:hover {
+    background-color: #FDDCC4;
+    transition: all 0.4s linear;
 }
 
 .account-donation {
