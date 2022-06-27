@@ -17,8 +17,6 @@
 }
 
 .container-limiting-header {
-
-
     max-width: 128rem;
     height: 12rem;
 
@@ -79,6 +77,12 @@
 .item-nav-header:nth-child(2) {
     border-bottom: 3px solid var(--color-main);
     color: #292929;
+}
+
+/*---------------*/
+.burger,
+.background {
+    display: none;
 }
 
 /*==================== *main* Block-Our-friends ====================*/
@@ -179,7 +183,7 @@
     margin: 4.5rem auto 0;
 }
 
-/*****/
+/** nav-btn **/
 .btn-left-nav-our-friends {
     display: flex;
     justify-content: center;

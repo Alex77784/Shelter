@@ -82,7 +82,14 @@
     color: #CDCDCD;
 }
 
+/*--------------------------------------------*/
+.burger,
+.background {
+    display: none;
+}
+
 /* ------------------------------------------ */
+
 .box-not-only {
     display: flex;
     justify-content: space-between;
@@ -381,7 +388,6 @@
     font-family: var(--font-title);
     font-size: 2rem;
     letter-spacing: 0.06em;
-    text-align: end;
 
     margin-top: 3rem;
     color: #545454;
