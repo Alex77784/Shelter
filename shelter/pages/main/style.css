@@ -196,148 +196,180 @@
 }
 
 /*======================= Our friends =========================*/
-
 .block-our-friends {
-    width: 100%;
-    background: #F6F6F6;
-}
-
-.container-our-pets {
     max-width: 128rem;
-    height: 87.7rem;
-
+    padding: 8rem 4rem 10rem;
     margin: 0 auto;
-    padding: 8rem 4rem 0;
+
+    background-color: #F6F6F6;
 }
 
-.title-our-pets {
+.title-our-friends {
     font-family: var(--font-title);
     font-size: 3.5rem;
     line-height: 130%;
-    text-align: center;
     letter-spacing: 0.06em;
+    text-align: center;
 
     color: #545454;
 }
 
-.box-nav {
+.block-carusel {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 6rem;
+    margin: 6rem 0;
 }
 
-/* ---------------------------- */
-.arrow-left {
-    width: 52px;
-    height: 52px;
-
-    background: url(../../assets/icons/Arrow-left.svg) center no-repeat;
-
-    border: 2px solid #F1CDB3;
-    border-radius: 100px;
+/* ------------ */
+.window-carusel {
+    max-width: 99rem;
+    overflow: hidden;
 }
 
-.arrow-left:hover {
-    background-color: var(--color-main);
-    transition: all 0.2s linear;
+.lenta {
+    display: flex;
+
+    position: relative;
+    top: 0;
+    left: -99rem;
 }
 
-/* ----------------------------- */
-.box-slider {
+@keyframes move-left {
+    0% {
+        left: -99rem;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes move-right {
+    0% {
+        left: -99rem;
+    }
+
+    100% {
+        left: -198rem;
+    }
+}
+
+.flip-through-left {
+    animation: move-left 0.5s linear;
+}
+
+.flip-through-right {
+    animation: move-right 0.5s linear;
+}
+
+.block-left,
+.block-active,
+.block-right {
     display: flex;
     column-gap: 9rem;
 }
 
-.card-pet {
+/* ------------ */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     width: 27rem;
     height: 43.5rem;
+    padding-bottom: 3rem;
 
     background: #FAFAFA;
     border-radius: 9px;
-
-    transition: all 0.4s linear;
+    transition: all 0.2s linear;
 }
 
-.card-pet:hover {
-    box-shadow: 0 0 5px 2px var(--color-main);
+.card:hover {
+    transform: translateY(-2px);
 }
 
-.card-pet:hover .btn-pet {
-    background: var(--color-main);
-    transition: all 0.4s linear;
+.card-img>img {
+    width: 100%;
 }
 
-.name-pet {
-    font-family: var(--font-title);
-    font-size: 2rem;
+.name {
     text-align: center;
+    font-family: var(--color-main);
+    font-size: 22px;
     letter-spacing: 0.06em;
-
-    margin: 3rem 0;
-
     color: #545454;
 }
 
-.btn-pet {
+.link-our-pets {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-family: var(--font-title);
-    font-size: 1.7rem;
-    letter-spacing: 0.06em;
-
-    margin: 0 auto;
-    width: 18.8rem;
+    width: 18.7rem;
     height: 5.2rem;
+    margin: 0 auto;
 
     border: 2px solid #F1CDB3;
     border-radius: 100px;
 
+    font-family: var(--font-title);
+    font-size: 17px;
+    letter-spacing: 0.06em;
     color: #292929;
+
+    transition: all 0.5s linear;
 }
 
-/* -------------------------- */
+.card:hover .link-our-pets {
+    background-color: var(--color-main);
+}
+
+/* ------------- */
+.arrow-left,
 .arrow-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 52px;
     height: 52px;
 
-    background: url(../../assets/icons/Arrow-right.svg) center no-repeat;
+    font-size: 1.8rem;
 
-    border: 2px solid #F1CDB3;
-    border-radius: 100px;
+    background-color: transparent;
+    border: 2px solid var(--color-main);
+    border-radius: 100%;
+    transition: all 0.3s linear;
 }
 
+.arrow-left:hover,
 .arrow-right:hover {
     background-color: var(--color-main);
-    transition: all 0.2s linear;
 }
 
-/* --------------------------- */
-.btn-next-page {
+.btn-our-friends {
     display: flex;
     justify-content: center;
     align-items: center;
 
     font-family: var(--font-title);
-    font-size: 1.7rem;
+    font-size: 17px;
     letter-spacing: 0.06em;
-
-    margin: 6rem auto 0;
-    width: 26.1rem;
-    height: 5.2rem;
-
-    background: var(--color-main);
-    border-radius: 100px;
-
     color: #292929;
+
+    width: 26rem;
+    height: 5.2rem;
+    margin: 0 auto;
+
+    background-color: var(--color-main);
+    border-radius: 10rem;
+    transition: all 0.3s linear;
 }
 
-.btn-next-page:hover {
-    transition: all 0.2s linear;
-    background: #FDDCC4;
+.btn-our-friends:hover {
+    background-color: #FDDCC4;
 }
 
 /*===================== block-help ====================*/

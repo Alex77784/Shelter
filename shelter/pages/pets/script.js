@@ -4,7 +4,7 @@ let nav = document.querySelector('.nav-header'),
     itemNav = document.querySelectorAll('.item-nav-header'),
     logo = document.querySelector('.box-logo-header'),
     logoCopy = document.querySelector('.box-logo-header').cloneNode(1),
-    bodyLock = document.querySelector('body');
+    bodyLock = document.body;
 
 // -------------------
 burger.addEventListener('click', openBurger);
@@ -16,8 +16,11 @@ function openBurger() {
     burger.classList.toggle('active');
     background.classList.toggle('active');
     logo.classList.toggle('active');
-    logoCopy.classList.toggle('copy');
+    setTimeout(() => {
+        logoCopy.classList.toggle('copy');
+    }, 300);
     bodyLock.classList.toggle('active');
-
     nav.append(logoCopy);
 };
+
+// Carusel========================================
