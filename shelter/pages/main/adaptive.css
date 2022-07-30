@@ -106,7 +106,7 @@
         display: none;
     }
 
-    /* popup */
+    /* popup JS*/
 
     .center-window-close {
         width: 68.2rem;
@@ -426,14 +426,12 @@
         right: 6rem;
     }
 
-    /* popup  */
-
+    /* popup  JS*/
 
     .center-window-close {
         width: 32rem;
         height: 39rem;
     }
-
 
     .popup-inner {
         top: 54%;
@@ -466,20 +464,6 @@
 
     .list-description {
         row-gap: 0.5rem;
-    }
-
-    .item-description {
-        font-family: var(--font-title);
-        font-weight: 600;
-        font-size: 1.5rem;
-        color: #000000;
-    }
-
-    .item-description>span {
-        font-family: var(--font-title);
-        font-weight: 400;
-        font-size: 1.5rem;
-        color: #000000;
     }
 
     /*===================== block-help ====================*/
@@ -597,6 +581,7 @@
     }
 
     /*----------------------------------*/
+
     .box-address-footer {
         margin: 0 auto;
         row-gap: 4rem;

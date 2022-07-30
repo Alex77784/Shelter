@@ -8,21 +8,29 @@ let nav = document.querySelector('.nav'),
 
 // burger ---------------
 burger.addEventListener('click', openBurger);
-background.addEventListener('click', openBurger);
-navItemAll.forEach(elem => elem.addEventListener('click', openBurger));
+background.addEventListener('click', closeBurger);
+navItemAll.forEach(elem => elem.addEventListener('click', closeBurger));
 
 function openBurger() {
-    burger.classList.toggle('active');
-    nav.classList.toggle('active');
+    burger.classList.add('active');
+    nav.classList.add('active');
     background.classList.toggle('active');
-    boxLogo.classList.toggle('active');
+    boxLogo.classList.add('active');
     setTimeout(() => {
-        boxLogoCopy.classList.toggle('copy');
+        boxLogoCopy.classList.add('copy');
     }, 300);
-    bodyLock.classList.toggle('active');
+    bodyLock.classList.add('active');
 
     nav.append(boxLogoCopy);
 };
+function closeBurger() {
+    burger.classList.remove('active');
+    nav.classList.remove('active');
+    background.classList.remove('active');
+    boxLogo.classList.remove('active');
+    boxLogoCopy.classList.add('copy');
+    bodyLock.classList.remove('active');
+}
 
 // carusel ---------------
 
