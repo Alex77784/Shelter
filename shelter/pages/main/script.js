@@ -23,6 +23,7 @@ function openBurger() {
 
     nav.append(boxLogoCopy);
 };
+
 // carusel ---------------
 
 let arrowLeft = document.querySelector('#arrow-left');
@@ -33,6 +34,7 @@ let blockActive = document.querySelector('#block-active');
 let blockRight = document.querySelector('#block-right');
 let lastSaveArrayAnim = [0, 1, 2];
 let nextCards = cleanArray(lastSaveArrayAnim);
+let newBlockCardForPopup = document.querySelectorAll('.card');
 
 function cleanArray(lastSaveArrayAnim) {
     let a = generatorArray();
@@ -80,9 +82,10 @@ function generatorArray() {
     return arr;
 };
 
-function createTemplateCard({ img, name }) {
-    let card = document.createElement('div');
+function createTemplateCard({ img, name, id }) {
+    let card = document.createElement('article');
     card.classList.add('card');
+    card.dataset.id = id;
 
     card.innerHTML = `
     <div class="img-card">
@@ -109,9 +112,8 @@ function flipThroughRight() {
     arrowRight.removeEventListener('click', flipThroughRight);
 }
 
-lenta.addEventListener('animationend', animationendLenta);
-let array = nextCards;
 
+lenta.addEventListener('animationend', animationendLenta);
 function animationendLenta(animEvent) {
     let array = nextCards;
 
@@ -122,11 +124,13 @@ function animationendLenta(animEvent) {
         blockLeft.appendChild(createTemplateCard(dataPets[array[0]]));
         blockLeft.appendChild(createTemplateCard(dataPets[array[1]]));
         blockLeft.appendChild(createTemplateCard(dataPets[array[2]]));
-
         lastSaveArrayAnim.splice(0, 3, nextCards[0], nextCards[1], nextCards[2]);
-        nextCards = cleanArray(lastSaveArrayAnim);
-
+        nextCards = cleanArray(lastSaveArrayAnim)
         arrowLeft.addEventListener('click', flipThroughLeft);
+
+        newBlockCardForPopup = document.querySelectorAll('.card');
+        newBlockCardForPopup.forEach(elem => elem.
+            addEventListener('click', openPopup));
     } else {
         lenta.classList.remove('flip-through-right');
         blockActive.innerHTML = blockRight.innerHTML;
@@ -134,10 +138,70 @@ function animationendLenta(animEvent) {
         blockRight.appendChild(createTemplateCard(dataPets[array[0]]));
         blockRight.appendChild(createTemplateCard(dataPets[array[1]]));
         blockRight.appendChild(createTemplateCard(dataPets[array[2]]));
-
         lastSaveArrayAnim.splice(0, 3, nextCards[0], nextCards[1], nextCards[2]);
         nextCards = cleanArray(lastSaveArrayAnim);
-
         arrowRight.addEventListener('click', flipThroughRight);
+
+        newBlockCardForPopup = document.querySelectorAll('.card');
+        newBlockCardForPopup.forEach(elem => elem.
+            addEventListener('click', openPopup));
     }
+}
+
+// popup
+let popupBackground = document.querySelector('.popup-background');
+let popup = document.querySelector('.popup');
+bodyLock = document.body;
+
+function templatePopup(dataCard) {
+    let popupInner = document.createElement('div');
+    popupInner.classList.add('popup-inner')
+    popupInner.innerHTML = `
+    <div class="box-img">
+    <img src="${dataCard.img}" alt="picture">
+</div>
+<div class="box-description">
+    <h1 class="title-description">${dataCard.name}</h1>
+    <h3 class="subtitle-description">${dataCard.breed}</h3>
+    <p class="text-description">${dataCard.description}</p>
+    <ul class="list-description">
+        <li class="item-description">
+            Age: <span>${dataCard.age}</span>
+        </li>
+        <li class="item-description">
+            Inoculations: <span>${dataCard.inoculations}</span>
+        </li>
+        <li class="item-description">
+            Diseases: <span>${dataCard.diseases}</span>
+        </li>
+        <li class="item-description">
+            Parasites: <span>${dataCard.parasites}</span>
+        </li>
+    </ul>
+</div>
+    `
+    let centerWindowClose = document.createElement('div');
+    centerWindowClose.classList.add("center-window-close");
+    centerWindowClose.innerHTML = `
+    <button class="btn-close" >×</button>
+    `
+    popup.appendChild(popupInner);
+    popupBackground.appendChild(centerWindowClose)
+}
+
+// ------------
+
+newBlockCardForPopup.forEach(elem => elem.addEventListener('click', openPopup));
+function openPopup(event) {
+    let numberCard = event.currentTarget.dataset.id - 1;
+    templatePopup(dataPets[numberCard]);
+    popupBackground.classList.add('active');
+    bodyLock.classList.add('active');
+}
+popupBackground.addEventListener('click', closePopup);
+function closePopup() {
+    popup.innerHTML = '';
+    popupBackground.innerHTML = '';
+    popupBackground.classList.remove('active');
+    bodyLock.classList.remove('active');
 }

@@ -257,11 +257,11 @@
 }
 
 .flip-through-left {
-    animation: move-left 0.5s linear;
+    animation: move-left 1s;
 }
 
 .flip-through-right {
-    animation: move-right 0.5s linear;
+    animation: move-right 1s;
 }
 
 .block-left,
@@ -288,6 +288,7 @@
 
 .card:hover {
     transform: translateY(-2px);
+    cursor: pointer;
 }
 
 .card-img>img {
@@ -370,6 +371,133 @@
 
 .btn-our-friends:hover {
     background-color: #FDDCC4;
+}
+
+/* popup */
+
+.popup-background.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-background.active:hover .btn-close {
+    background-color: var(--color-main);
+    color: black;
+}
+
+.center-window-close {
+    display: flex;
+    justify-content: end;
+
+    width: 95.2rem;
+    height: 55.2rem;
+}
+
+.btn-close {
+    font-weight: 700;
+    text-align: center;
+    line-height: 5px;
+    font-size: 5rem;
+    color: #F6F6F6;
+
+    width: 5.2rem;
+    height: 5.2rem;
+
+    border: 2px solid var(--color-main);
+    border-radius: 100%;
+    background: transparent;
+    transition: all 0.3s linear;
+}
+
+.popup-inner {
+    position: fixed;
+    top: 54%;
+    left: 48.8%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    width: 90rem;
+    height: 50rem;
+
+    border-radius: 1rem;
+    background-color: #F6F6F6;
+}
+
+.box-img {
+    width: 50rem;
+    border-radius: 1rem;
+}
+
+.box-img>img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.box-description {
+    width: 35rem;
+    margin: 5rem 0 0 3rem;
+}
+
+.title-description {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 3.5rem;
+    letter-spacing: 0.06em;
+    color: #000000;
+
+    margin-bottom: 1rem;
+}
+
+.subtitle-description {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.text-description {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+
+    margin: 4rem 0;
+}
+
+.list-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.item-description {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.item-description>span {
+    font-family: var(--font-title);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+body.active {
+    overflow: hidden;
 }
 
 /*===================== block-help ====================*/

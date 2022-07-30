@@ -106,6 +106,90 @@
         display: none;
     }
 
+    /* popup */
+
+    .center-window-close {
+        width: 68.2rem;
+        height: 40.2rem;
+    }
+
+    .popup-inner {
+        position: fixed;
+        top: 54%;
+        left: 48%;
+
+        width: 63rem;
+        height: 35rem;
+    }
+
+    .box-img {
+        width: 35rem;
+    }
+
+    .box-description {
+        width: 26rem;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .text-description {
+        font-size: 1.3rem;
+        line-height: 130%;
+        margin: 2rem 0;
+    }
+
+    /*===================== block-help ====================*/
+
+    .block-help {
+        width: 100%;
+        background-color: #FFFFFF;
+    }
+
+    .container-help {
+        max-width: 128rem;
+        height: 61.1rem;
+
+        margin: 0 auto;
+        padding: 8rem 4rem 0;
+    }
+
+    .title-help {
+        font-family: var(--font-title);
+        font-size: 3.5rem;
+        text-align: center;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+
+        margin-bottom: 6rem;
+        color: #545454;
+    }
+
+    .box-inner-help {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        row-gap: 5rem;
+        column-gap: 12rem;
+
+        height: 28.1rem;
+    }
+
+    .item-help {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .text-help {
+        font-family: var(--font-title);
+        font-size: 2rem;
+        letter-spacing: 0.06em;
+
+        margin-top: 3rem;
+        color: #545454;
+    }
+
 
     /*===================== block-help ====================*/
 
@@ -342,7 +426,61 @@
         right: 6rem;
     }
 
+    /* popup  */
 
+
+    .center-window-close {
+        width: 32rem;
+        height: 39rem;
+    }
+
+
+    .popup-inner {
+        top: 54%;
+        left: 48.8%;
+        width: 24rem;
+        height: 34.1rem;
+    }
+
+    .box-img {
+        display: none;
+    }
+
+    .box-description {
+        width: 35rem;
+        margin: 1rem;
+    }
+
+
+    .title-description {
+        text-align: center;
+    }
+
+    .subtitle-description {
+        text-align: center
+    }
+
+    .text-description {
+        text-align: justify;
+    }
+
+    .list-description {
+        row-gap: 0.5rem;
+    }
+
+    .item-description {
+        font-family: var(--font-title);
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #000000;
+    }
+
+    .item-description>span {
+        font-family: var(--font-title);
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: #000000;
+    }
 
     /*===================== block-help ====================*/
 
