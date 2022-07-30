@@ -12,14 +12,14 @@ background.addEventListener('click', closeBurger);
 navItemAll.forEach(elem => elem.addEventListener('click', closeBurger));
 
 function openBurger() {
-    burger.classList.add('active');
-    nav.classList.add('active');
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
     background.classList.toggle('active');
-    boxLogo.classList.add('active');
+    boxLogo.classList.toggle('active');
     setTimeout(() => {
         boxLogoCopy.classList.add('copy');
     }, 300);
-    bodyLock.classList.add('active');
+    bodyLock.classList.toggle('active');
 
     nav.append(boxLogoCopy);
 };
@@ -28,7 +28,7 @@ function closeBurger() {
     nav.classList.remove('active');
     background.classList.remove('active');
     boxLogo.classList.remove('active');
-    boxLogoCopy.classList.add('copy');
+    boxLogoCopy.classList.remove('copy');
     bodyLock.classList.remove('active');
 }
 
