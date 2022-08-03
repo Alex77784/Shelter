@@ -173,6 +173,143 @@
     color: #292929;
 }
 
+/* popup */
+
+.popup-inner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-52%, -45%);
+
+    display: flex;
+
+    width: 90rem;
+    height: 50rem;
+
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.box-img {
+    width: 50rem;
+}
+
+.box-img>img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.box-description {
+    width: 351px;
+    height: 362px;
+    margin: 5rem 0 0 3rem;
+}
+
+.title-description {
+    font-family: var(--font-title);
+    font-weight: 500;
+    font-size: 35px;
+    letter-spacing: 0.06em;
+    color: #000000;
+
+    margin-bottom: 1rem;
+}
+
+.subtitle-description {
+    font-family: var(--font-title);
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.text-description {
+    font-family: var(--font-title);
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+
+    margin: 4rem 0;
+}
+
+.list-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.item-description {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    list-style: none;
+}
+
+.item-description>span {
+    font-weight: 400;
+}
+
+.item-description::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: var(--color-main);
+
+    margin-right: 1rem;
+}
+
+/* ------------------- */
+.popupBackground.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.windowCenter {
+    text-align: end;
+    width: 95rem;
+    height: 55rem;
+}
+
+.btn-close {
+    width: 52px;
+    height: 52px;
+
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 0;
+
+    border: 2px solid var(--color-main);
+    border-radius: 100%;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.popupBackground.active:hover .btn-close {
+    color: black;
+    background-color: #f1cdb3a2;
+}
+
+.btn-close:hover {
+    color: black;
+    background-color: #f1cdb3a2;
+}
+
 /*-----------------------------*/
 .nav-our-friends {
     display: flex;

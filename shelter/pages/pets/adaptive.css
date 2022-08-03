@@ -24,11 +24,8 @@
 
     }
 
-    .card-pet:nth-child(7) {
-        display: none;
-    }
-
-    .card-pet:last-child {
+    .card-pet:nth-child(7),
+    .card-pet:nth-child(8) {
         display: none;
     }
 
