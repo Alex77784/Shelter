@@ -33,6 +33,40 @@
         margin: 4rem auto 0;
     }
 
+    /* popup */
+
+    .popup-inner {
+        transform: translate(-53%, -44%);
+        width: 63rem;
+        height: 35rem;
+    }
+
+    .box-img {
+        width: 35rem;
+    }
+
+    .box-description {
+        width: 26rem;
+        height: 30.3rem;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .text-description {
+        font-size: 13px;
+        margin: 2rem 0;
+    }
+
+    .list-description {
+        row-gap: 1rem;
+    }
+
+    /* ------------------- */
+
+    .windowCenter {
+        width: 68.2rem;
+        height: 40.2rem;
+    }
+
     /*==================== footer ===================*/
 
     .container-footer {
@@ -140,37 +174,41 @@
         display: none;
     }
 
-    .name-pet {
-        font-family: var(--font-title);
-        font-size: 2rem;
-        text-align: center;
-        letter-spacing: 0.06em;
+    /* popup */
 
-        margin: 3rem 0;
-
-        color: #545454;
+    .popup-inner {
+        width: 24rem;
+        height: 36rem;
     }
 
-    .btn-pet {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-family: var(--font-title);
-        font-size: 1.7rem;
-        letter-spacing: 0.06em;
-
-        margin: 0 auto;
-        width: 18.8rem;
-        height: 5.2rem;
-
-        border: 2px solid #F1CDB3;
-        border-radius: 100px;
-
-        color: #292929;
+    .box-img {
+        display: none;
     }
 
-    /*-----------------------------*/
+    .box-description {
+        width: 26rem;
+        height: 30.3rem;
+        margin: 1rem 0 0 1rem;
+    }
+
+    .text-description {
+        font-size: 13px;
+        margin: 2rem 0;
+    }
+
+    .list-description {
+        row-gap: 1rem;
+    }
+
+    /* ------------------- */
+
+    .windowCenter {
+        width: 30rem;
+        height: 41rem;
+    }
+
+    /** nav-btn **/
+
     .nav-our-friends {
         width: 30rem;
         height: 5.2rem;
@@ -178,7 +216,6 @@
         margin: 4.3rem auto;
     }
 
-    /** nav-btn **/
     .btn-left-nav-our-friends {
         display: flex;
         justify-content: center;
@@ -343,5 +380,25 @@
         position: absolute;
         top: 3rem;
         left: 1rem;
+    }
+
+    /* ============ pagination ============= */
+
+    .desable-right-btn {
+        color: #CDCDCD;
+        border: 2px solid #CDCDCD;
+    }
+
+    .desable-right-btn:hover {
+        background-color: transparent;
+    }
+
+    .include-left-btn {
+        color: black;
+        border: 2px solid var(--color-main);
+    }
+
+    .include-left-btn:hover {
+        background-color: var(--color-main);
     }
 }
